@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{report}
+
+
+% Title Page
+\title{Distributed Stochastic Simulation\\ Assignment 6\\ Descrete Event Simulation}
+\author{Ketan C. Maheshwari}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Simulating a probabilistic model involves generating the stochastic mechanisms of the model and then observing the resultant flow of the model over time. Depending on the reasons of the simulation, there will be certain quantities that will want to determine. The present report documents the Discrete Event Simulation for a FIFO queue over an observed time period. We describe the approach and programs used for this simulation and collect the data. We also compute the analytical results of this model and make a comparison.
+\end{abstract}
+
+\noindent \textbf{Introduction}\\
+To simulate the events in a FIFO queue, we take the following parameters:\\
+$\lambda$ : Denotes the customer arrival rate as a descrete Poisson random variable.\\
+$\mu$ : Denotes the customer service rate as a descrete Poisson random variable.\\
+We consider Observation time as 100 units of time, modeled here as the iterations.
+Following section briefly describes the programs that covers the implementation.\\
+
+\noindent \textbf{Programs Description}\\
+\underline{Customer.java}\\
+This class models the object customer. Associated with each customer is its arrival time, service time and departure time.\\
+\underline{Q.java}\\
+This class is a FIFO queue implementation. As a new Customer arrives, it is placed in the queue using Q.insert method and as soon as the service is done the Customer is removed from the queue.\\
+\underline{DES.java}\\
+This is the core functionality of the simulation where we simulate the arrival and service of the customers. We perform 1000 experiments with an observation time of 100 and 1000 units.\\ Usage: java DES $\lambda$ $\mu$ Observation time.\\
+\underline{TheoreticalDES.java}\\ 
+This class is used to compute the analytical value of the results that are compared with the simulated results.\\[11pt]
+
+\noindent \textbf{Simulation Results}\\
+Following are the simulation results obtained from a practical run of the program DES.class :\\
+$\lambda$= 10.0 $\mu$= 11.0 Observation interval O = 10\\
+Average waiting time: 0.0668\\
+Average queue length:0.0675\\
+Average number of Customers in the System:1.0675\\
+Average throughput time:1.0E-4\\
+
+\noindent$\lambda$= 10.0 $\mu$= 11.0 Observation interval O = 20\\
+Average waiting time: 0.00245\\
+Average queue length:0.00335\\
+Average number of Customers in the System:1.00335\\
+Average throughput time:2.0E-4\\
+
+\noindent$\lambda$= 10.0 $\mu$= 11.0 Observation interval O = 40\\
+Average waiting time: 0.88105\\
+Average queue length:0.882\\
+Average number of Customers in the System:1.882\\
+Average throughput time:2.25E-4\\
+
+\noindent$\lambda$= 10.0 $\mu$= 11.0 Observation interval O = 100\\
+Average waiting time: 1.62784\\
+Average queue length:1.6288\\
+Average number of Customers in the System:2.6288\\
+Average throughput time:0.00111\\
+
+\noindent$\lambda$= 10.0 $\mu$= 11.0 Observation interval O = 1000\\
+Average waiting time: 0.51017\\
+Average queue length:0.511169\\
+Average number of Customers in the System:1.511169\\
+Average throughput time:0.01428\\
+
+\noindent \underline{For $\lambda$=10 and $\mu$=20}\\
+$\lambda$= 10.0 $\mu$= 20.0 Observation interval O = 10\\
+Average waiting time: 0.163\\
+Average queue length:0.163\\
+Average number of Customers in the System:1.163\\
+Average throughput time:0.0\\
+
+\noindent$\lambda$= 10.0 $\mu$= 20.0 Observation interval O = 20\\
+Average waiting time: 0.78105\\
+Average queue length:0.782\\
+Average number of Customers in the System:1.782\\
+Average throughput time:6.0E-4\\
+
+\noindent$\lambda$= 10.0 $\mu$= 20.0 Observation interval O = 40\\
+Average waiting time: 2.6278\\
+Average queue length:2.628625\\
+Average number of Customers in the System:3.628625\\
+Average throughput time:0.0011\\
+
+\noindent$\lambda$= 10.0 $\mu$= 20.0 Observation interval O = 100\\
+Average waiting time: 6.23444\\
+Average queue length:6.23543\\
+Average number of Customers in the System:7.23543\\
+Average throughput time:0.00119\\
+
+\noindent$\lambda$= 10.0 $\mu$= 20.0 Observation interval O = 1000\\
+Average waiting time: 0.730157\\
+Average queue length:0.73115\\
+Average number of Customers in the System:1.73115\\
+Average throughput time:0.016618\\
+
+\noindent \textbf{Analytical Results}\\
+$\lambda$=10 $\mu$=11\\
+Expected waiting time: 0.9090909090909091\\
+Expected queue length: 9.090909090909092\\
+Expected number of units in the system: 10.0\\
+Expected throughput time of a unit: 1.0\\
+
+\noindent$\lambda$=10 $\mu$=20\\
+Expected waiting time: 0.05\\
+Expected queue length: 0.5\\
+Expected number of units in the system: 1.0\\
+Expected throughput time of a unit: 0.1\\
+
+\end{document}          

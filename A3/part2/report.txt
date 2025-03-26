@@ -1,0 +1,12 @@
+This is the second part of the assignment 3(Central Limit Theorem)
+The assignment consists of various files that are described as follows with
+results:
+1. CentralLimit.java/class: This program computes the value of zeta according
+to the given formulae and finds the mean and variance of the distribution as follows:  
+Mean:-2.228073128277864E-4
+Variance:0.0034095426294746276
+
+2. zeta_distribution.dat: This file holds the distribution output from the
+above program.
+
+3. zeta_dist.eps: This file shows the distribution which is indeed a normal plot.

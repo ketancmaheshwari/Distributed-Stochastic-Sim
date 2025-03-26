@@ -1,0 +1,23 @@
+The present assignment contains various files associated with finding out the value of pi and computing the chi squared value. Each file/file group are described in brief.
+
+1. PiGoodRandomGenerator.java/class: This is a core program that generates random numbers using java's pseudo random number generator. The program performs 100 trials to find out the value of pi. This value is put in a separate file and plotted. Such 100 experiments are done to find out the value of Chi-squared. A 1000 determinations of chi-squared are done each consisting of such 100 experiments. The results are diverted to another text file.
+
+2. PiBadRandomGenerator.java/class: This program is the counterpart of the earlier one with a bad random generator, the code of which is given in the problem statement(the short_period_rng). Output of this program too is diverted to a text file.
+
+3. pi_value_approx.txt: This file is one of the output of the earlier programs that generate the approximate value of pi for 100 trials.
+
+4. 1000_chi_square_determinations_using_*.txt: These files are the outputs of the 1st and 2nd programs. These values describe the chi_square value for 1000 determinations. 
+
+5. sorted_chi_square_*.txt: These files are the sorted versions of the 1000 chi_square determinations done earlier.
+
+6. *.eps: These files are the plotted versions of the text files generated using the first two programs.
+
+Conclusion: A reasonably steady cumulative value plot  of chi_squared suggests that the experiment yields proper approximation of pi in the case of good random number generator. The same cant be said about bad random number generator as it doesnt gives a smoothly increasing plot.
+
+The statistical acceptability of the chi_squared results can be found out using the expression:
+
+	if chi_square < chi_square(A, k-1)
+	then we accept the result as acceptable.
+
+	where A=0.01 degree of error and
+	k = number of trials

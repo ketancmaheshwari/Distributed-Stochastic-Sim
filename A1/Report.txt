@@ -1,0 +1,19 @@
+The present assignment consists of the following files with a brief description of each:
+
+1. GenerateRandomText.java/class: This program uses the java's pseudo_random method to generate random ascii characters as specified in the question. The size of this file is deliberately kept same as the size of subject regular file( about 2.5 million).
+
+2. Expectation.java/class: This program finds the expectation value of appearance of a three-character word on a large text file in accordance with the formula E[x]=sum(x.p(x)). The probability is computed as 1/26*26*26.
+
+3. Random.txt: This is the resultant output file of the GererateRandomText program.
+
+4. Regular.txt: This is a large text file stripped off alphanumeric and control characters. The text is converted to uppercase. The file is about a novel 'war_and_peace'.
+
+5. Search.java/class: This file is a program that parses the random and regular text to find out the occurance of a word on the target file. Usage: java Search word filename.
+
+6. Random/Regular_Distribution_of_CAT.txt: These 2 files are the output of Search program that finds out the distribution of the word CAT on both files.
+
+7. random/regular.ps: This is a postscript file that describes the distribution of three character word "CAT" on both files graphically.
+
+8. reg/rnd.plt: gnuplot files.
+
+

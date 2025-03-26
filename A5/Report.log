@@ -1,0 +1,85 @@
+This is pdfTeXk, Version 3.14159-1.10b (Web2C 7.4.5) (format=pdflatex 2005.6.9)  21 OCT 2005 21:48
+ %&-line parsing enabled.
+**Report.tex
+(./Report.tex{/usr/share/texmf/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+utch, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/report.cls
+Document Class: report 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./Report.aux)
+\openout1 = `Report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 13.
+ [1
+
+{/usr/share/texmf/dvips/config/pdftex.map}] [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
+ (/usr/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+
+[1]
+Overfull \hbox (18.83408pt too wide) in paragraph at lines 62--63
+/cmr10/Cicones--Malea--Ithaca2--Circeo--Sirens--Hades--Calypso--Cyclops--Birzeb
+bugia--
+ []
+
+
+Overfull \hbox (7.49529pt too wide) in paragraph at lines 62--63
+/cmr10/Aeolia[]island--Laestrygonians--Ithaca--Scylla[]and[]Charibdis--Troy--Ea
+vignan 
+ []
+
+[2] (./Report.aux) ) 
+Here is how much of TeX's memory you used:
+ 262 strings out of 50392
+ 2773 string characters out of 689556
+ 49059 words of memory out of 1501416
+ 3334 multiletter control sequences out of 10000+25000
+ 6983 words of font info for 25 fonts, out of 400000 for 1000
+ 54 hyphenation exceptions out of 10000
+ 23i,6n,19p,662b,249s stack positions out of 3000i,500n,3000p,65000b,5000s
+ 28 PDF objects out of 65536
+ 0 named destinations out of 20000
+ 0 words of extra memory for PDF output out of 65536
+{/usr/share/texmf/dvips/tetex/bbad153f.enc}</usr/share/texm
+f/fonts/type1/bluesky/cm/cmsy10.pfb>{/usr/share/texmf/dvips/tetex/f7b6d320.enc}
+</usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type
+1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></us
+r/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb>
+Output written on Report.pdf (4 pages, 42711 bytes).

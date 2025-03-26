@@ -1,0 +1,35 @@
+//Assignment 6 source
+Instructions: Write a discrete event simulation of a single-server queuing system.
+
+Customers arrive in accordance with a Poisson process with rate 1/lambda customers per time unit (inter arrival times are exponential, use that to generate the arrival times). They are served immediately if the server is idle, otherwise they are put in a queue and served on the first come first serve basis. Service time is exponential with rate 1/mu customers per time unit.
+Observe the system for a period of O time units to obtain the following quantities:
+
+[a] average waiting time in the queue (W) for customers leaving the queue during the observation period,
+
+[b] average queue length (L) over the observation period,
+
+[c] average number of customers in the system (thus those in the queue plus any currently being served) (Q),
+
+[d] average ¿throughput¿ time (the time from arrival to departure) (T) for customers leaving the system during the observation period.
+
+Measuring W and T is quite straightforward: you calculate them individually for each customer and take the average.
+
+Measuring L and Q is more complex, as you need to take the duration of each state in simulation time t into account when calculating the expected value.
+
+You can stop the simulation after the required statistics have been obtained.
+
+Perform the experiments for the values of lambda=10, mu=11 and 20, and O=10, 20, 40, 100 and 1000.
+
+Repeat the simulation at least 1000 times (even better 10000), using independent random streams and calculate the average and standard deviation for each quantity measured. For this problem, you can do this either by restarting the simulation with new random seeds, or by just resetting the statistics, and starting a new observing period while the simulation continues to run.
+
+Verify the results obtained with the analytical solutions for M/M/1/inf/inf queue (see the slides from the lecture).
+
+[e] (OPTIONAL) Before each observation period, run the simulation unobserved for a number of time-units, to avoid start-up effects and correlations between successive samples. How does this affect the results and why?
+
+[f] (OPTIONAL 2) Do not only measure the standard deviations between the averages of each run, but also the standard deviations of the measured quantities within the run. What do you notice?
+
+IMPORTANT NOTE:
+A step-by-step description of how to build such a simulator is provided in sections 6.1 and 6.2 of the course book (attached, click View/Complete below). Please note that you need to use a simpler (homogeneous) Poisson process for arrivals. Also, you have more measurements to make, so you will need more counter variables than in the book.
+
+Deadline: 28-Oct-2005
+

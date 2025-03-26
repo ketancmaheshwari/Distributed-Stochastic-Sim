@@ -1,0 +1,15 @@
+ The present assignment contains various files associated with finding out the poisson distributed random variable and the improvisation of the algorithm. Following point describes the solution with related data and results:
+
+ 1. The poisson distributed random variable for lambda=1 10 and 100 is generated using the algorithm given in Ross book. It is done using java programming and java's internal random number generator. The same program(PoissonRandomVariable.java/class) also finds the expectation and variance.
+
+ 2. The plot for the distribution is generated in lambda1,lambda10 and lambda100.eps using gnuplot.
+
+ 3. The time required to generate distribution for these values increases as we go from lambda=1 to lambda=100 but cant make out exactly the trend of increment as only three time values are available. It seems the time required should increase exponentially.
+
+ 4. The expectation and variance for lambda=1 are 1.01163 and 1.0104 respectively ,that for lambda=10 are 9.98 and 10.07,and that for lambda=100 are 99.07 and 99.58 on a random run.
+
+ 5.The original algorithm takes too long to generate distribution for lambda = 1000  in that it doesn't gives any output for a long time, which means that it should be enhanced.
+
+ 6. The enhanced version of the algorithm is presented in program titled PoissonRandomUsingLog.java/class that makes use of log to the base e to avoid the exponential operations with large powers.
+
+ 7. The output of this program gives a distribution of poisson variable for lambda=1000.

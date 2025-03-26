@@ -1,0 +1,36 @@
+import java.util.Random;
+
+public class PoissonRandomVariable {
+
+	public static void main(String[] args) {
+		for(int trial=0;trial<1000;trial++){
+			//generate a random number U
+			double i=0.0;
+			double p=0.0;
+			double lambda=1.0;
+			double F=0.0;
+			double X=0.0;
+			Random rn = new Random();
+			double U=rn.nextDouble();
+			
+			// set i=0, p=e**-lambda,F=p
+			p=Math.exp(-lambda);
+			F=p;
+
+			//if U<F, set X=i stop
+			//p=lambda*p/(i+1),F=F+p,i=i+1
+			//go to step 3
+
+			while(true){
+				if(U < F){
+					X=i;
+					break;
+				}//end if
+				p=lambda*p/(i+1);
+				F+=p;
+				i++;
+			}//end while
+			System.out.println(trial+"  "+F);
+		}//end outer for
+	}//end main
+}//end class

@@ -1,0 +1,186 @@
+Question A.
+
+The results for montecarlo integrations are available on the file named montecarloresults.txt. This file is obtained by running the program MonteCarlo.java with number of trials as command line argument.
+A brief description of results is as follows:
+
+The integral at 3600 trials is 0.6330
+The standard deviation at 3600 trials is 0.0333
+The estimated error is .00087
+The computed error is .00055
+
+for trials >> 3600 we get following results:
+
+Number of trials: 36000 (10 times the original)
+
+The value of integral(theta) is: 0.6337571862194743
+The standard deviation is: 0.032973297432893615
+Theoretical value of integral is: 0.6321205588285577
+The estimated value of error is: 0.001636627390916634
+The computed value of error using "std_dev/sqrt(n)" is: 1.7378453642354476E-4
+
+The value of standard deviation does not change significantly when going to
+higher trials.
+
+There is indeed an order of magnitude difference between estimated and
+computed error in the case of higher number of trials.
+
+The results for 20 subsets of 180 trials each are as follows:
+
+***Mean of 20 subsets***
+subset 0  	0.6387215845283827
+subset 1  	0.6474180795189404
+subset 2  	0.6452409638896742
+subset 3  	0.6491002985981182
+subset 4  	0.6548582783827851
+subset 5  	0.6568685497837025
+subset 6  	0.6519753610636818
+subset 7  	0.6466967030573952
+subset 8  	0.6475933288751098
+subset 9  	0.6471969746096359
+subset 10 	0.643429420249566
+subset 11 	0.6425424912794799
+subset 12 	0.63893241208663
+subset 13 	0.6310536238991578
+subset 14 	0.6222144798838632
+subset 15 	0.6163880387606234
+subset 16 	0.609035537450163
+subset 17 	0.6127247460482202
+subset 18 	0.6046629110584891
+subset 19 	0.5976438221640503
+
+Observed Standard Deviation of 20 subsets is: 3.1153848283315766E-4
+The estimated error for 20 subsets is: 6.966212252220917E-5
+
+The estimated error in this result is indeed an order of magnitude smaller
+than the earlier results.
+
+The graphical view of above results of mean is available on mean.eps file.
+
+*****Standard deviation of 20 subsets**********
+subset 0 0.030168072728452785
+subset 1 0.03014669242309033
+subset 2 0.030484750187824237
+subset 3 0.031081885306698972
+subset 4 0.028839082914687127
+subset 5 0.02989322709348209
+subset 6 0.029053852622906575
+subset 7 0.02938242282980258
+subset 8 0.02958110999194871
+subset 9 0.03020355044176327
+subset 10 0.028766259378123448
+subset 11 0.03001379027866911
+subset 12 0.03029843971636168
+subset 13 0.03126180680252115
+subset 14 0.030841939390502806
+subset 15 0.03171915249395783
+subset 16 0.032310704101911114
+subset 17 0.03277060002817847
+subset 18 0.03167255079903926
+subset 19 0.032608143808405474
+
+The graphical view of above results is available on std_dev.eps file.
+
+
+Question B.
+
+Case where we need to chose constant C1, i have chosen C1 as 1/10 as its
+integral over the interval 0 to 10 is 1.
+The results of this experiment that is computed through the program ImportanceSampling.java are as follows:
+
+Integral: 1.204296112573011
+Standard Deviation: 6.92278733774878E-5
+Error:2.1891775744259493E-7
+
+These results are obtained for 10000 experiments each consisting of 10000
+trials.
+
+The methodology for the experiment is to generate a random number between the
+said interval and fit it into adjusted function adjusted with dividing by g(x)
+which in our case is C1.
+
+Standard Deviation and the error are again less by 2 orders of the magnitude
+that means that we benefit from the importance sampling approach.
+
+-----------------------------------------------------------------------------
+
+Case where we need to take C2 is obtained by solving integral of C2e^-x
+between the interval 0 and 10 and hence we obtain C2=1/1-e^-10
+
+We generate the random number from the distribution function C2e^-x with the
+help of inverse transform method hence the expression:
+X=-ln(1-U/C2)
+
+We plug this value into the expression f(x)/g(x) ie:
+(1/(x^3+1))/C2*e^-X)
+
+observe the results for a 10000 trials and compute the mean.
+We get following results:
+
+Integral:1.2042136149787557
+Standard Deviation:9.953213862666677E-7
+Error:3.1474825844789054E-9
+
+We see by comparison that the error and standard deviation both are gone down
+by 2 order of magnitude.
+
+So we conclude that we indeed get benefitted by importance sampling.
+
+Question C.  
+
+We continue this problem with the same approach of importance sampling and get
+the values of integral and standard deviation over a range of lambda = -1.0 to
+lambda = +1.0.
+
+The results are as follows:
+lambda  integral
+-1.0     1.5733626217550194
+-0.9     1.6057636073134691
+-0.8     1.6397093725944607
+-0.7     1.6871677885157426
+-0.6     1.7214621058072352
+-0.5     1.7475723397627931
+-0.4     1.7275717778726594
+-0.3     1.8434852739433936
+-0.2     1.753760821784296
+-0.1     1.8920493319085703
+0.1     1.8023230355773443
+0.2      1.7707545714279
+0.3     1.7531301320232477
+0.4     1.7390904872777342
+0.5     1.7099866476019046
+0.6     1.6805519462612057
+0.7     1.6192769641850147
+0.8     1.6133681727615763
+0.9     1.579116241555314
+
+lambda	standard deviation
+-1.0     0.010364974262850218
+-0.9     0.013574613548867288
+-0.8     0.015294847118863442
+-0.7     0.021741605616200373
+-0.6     0.02820829715458402
+-0.5     0.03944585221536446
+-0.4     0.0491416933648444
+-0.3     0.08367953087265205
+-0.2     0.10372280564421732
+-0.1     0.1906864502820954
+-1.0     6.494591822477524E-20
+0.0      0.29673125596942757
+0.1      0.10169064182872428
+0.2      0.07803461033507793
+0.3      0.054496753536640706
+0.4      0.03304739875052687
+0.5      0.026811457868510188
+0.6      0.020066229742318583
+0.7      0.018968510537578955
+0.8      0.014602771068866078
+0.9      0.014466396202506782
+
+The graphical view of these results are shown in the files lambda_vs_stddev
+and lambda_vs_mean.
+
+We find that standard deviation is decreases as lambda approaches +1.0
+
+On the same lines we get a good measure of integral when lambda is around 0.2
+
+We conclude that the results are best when lambda is near one.
